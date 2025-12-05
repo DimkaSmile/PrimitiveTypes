@@ -311,3 +311,4 @@ System.out.println(bonus);
 ```
 
 Строка `import java.util.Scanner;` импортирует класс `Scanner` из пакета `java.util`. Класс `Scanner` используется для ввода данных с клавиатуры или из файла.
+
