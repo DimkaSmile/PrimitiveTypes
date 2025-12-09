@@ -1,0 +1,27 @@
+Сначала создаём пепозиторий в GITе
+cd C:\Users\ЗС\OneDrive\Desktop\Java\PrimitiveTypes - переходим в папку проекта
+git init - инициализирование локального GIT-репозитория
+git remote add origin https://github.com/DimkaSmile/PrimitiveTypes.git - подключение к удалённому репозиторию
+git branch -M main - создаём ветку main
+git add . - добавляем все папки для коммита в первый раз
+git commit -m "Initial commit" - создаем коммит
+git push -u origin main - отправляем изменения на GIT (-u связывает локальную ветку с удалённой, чтобы в будущем можно было использовать просто git push.)
+
+
+Что можно дополнительно учесть
+Файл .gitignore
+Перед git add . убедитесь, что в проекте есть .gitignore с правилами для IDEA/Maven (как в предыдущем ответе). Иначе в репозиторий попадут временные файлы.
+
+Проверка подключения
+Если сомневаетесь, что удалённое репозиторий подключено верно, выполните:
+
+bash
+git remote -v
+Это покажет URL origin.
+
+Ошибки при git push
+Если GitHub уже создал ветку main при инициализации репозитория, может возникнуть конфликт. В таком случае используйте:
+
+bash
+git pull origin main --allow-unrelated-histories
+а затем повторите git push -u origin main.
